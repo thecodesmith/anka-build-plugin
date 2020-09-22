@@ -49,6 +49,15 @@ public class CreateDynamicAnkaNodeStep extends Step {
         dynamicSlaveProperties.setTag(tag);
     }
 
+    public boolean isAppendTimestamp() {
+        return dynamicSlaveProperties.isAppendTimestamp();
+    }
+
+    @DataBoundSetter
+    public void setAppendTimestamp(boolean appendTimestamp) {
+        dynamicSlaveProperties.setAppendTimestamp(appendTimestamp);
+    }
+
     public int getLaunchDelay() {
         return dynamicSlaveProperties.getLaunchDelay();
     }
@@ -219,7 +228,7 @@ public class CreateDynamicAnkaNodeStep extends Step {
     public void setPriority(int priority) {
         dynamicSlaveProperties.setPriority(priority);
     }
-    
+
 
     public Boolean getSuspend() {
         return dynamicSlaveProperties.getSuspend();
